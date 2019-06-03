@@ -1,5 +1,15 @@
 {
     "scripts": {
-      "test": "testcafe chrome index.js"
+        "test": "node test_suites/singleTestSuite.js --env=prod --mail=dk.kakol@gmail.com"
+    },
+    "dependencies": {
+        "dotenv": "^8.0.0",
+        "minimist": "^1.2.0",
+        "moment": "^2.24.0",
+        "moment-timezone": "^0.5.25",
+        "nodemailer": "^6.2.1",
+        "testcafe": "^1.2.0",
+        "testcafe-angular-selectors": "^0.3.2",
+        "testcafe-reporter-html": "^1.4.4"
     }
 }
