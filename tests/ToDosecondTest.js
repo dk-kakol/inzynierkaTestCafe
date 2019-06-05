@@ -1,10 +1,8 @@
 import { AngularSelector, waitForAngular } from 'testcafe-angular-selectors';
 
-fixture `Book Collection`
-  .page('http://localhost:3000/signin')
-  .beforeEach(async t => {
-    await waitForAngular();
-  });
+import fixture from '../src/fixtures/firstAppFixture';
+
+let config = fixture()
 
 test('Login', async t => {
   //const loginForm = AngularSelector('bc-login-form');

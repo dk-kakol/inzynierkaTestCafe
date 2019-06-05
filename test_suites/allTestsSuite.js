@@ -20,7 +20,7 @@ createTestCafe('localhost', 1337, 1338)
         const runner = testcafe.createRunner();
 
         return runner
-            .src(['tests/index.js', 'tests/index.js'])
+            .src(['tests/loginTest.js', 'tests/loginTest.js'])
             .reporter(['spec', {
                 name: 'html',
                 output: stream

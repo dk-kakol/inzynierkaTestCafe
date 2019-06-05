@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "test": "node test_suites/singleTestSuite.js --env=prod --mail=dk.kakol@gmail.com"
+        "test": "node test_suites/singleTestSuite.js --env=dev --mail=dk.kakol@gmail.com"
     },
     "dependencies": {
         "dotenv": "^8.0.0",
