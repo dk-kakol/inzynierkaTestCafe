@@ -1,0 +1,12 @@
+{
+    "dev": {
+        "url": "http://localhost:3000/signin",
+        "cookies": []
+    },
+    "prod": {
+        "url": "future_production_link",
+        "cookies": [
+            "set_claster_node=s1",
+            "switch_app_to_test_database=true"]
+    }
+}

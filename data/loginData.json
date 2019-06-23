@@ -1,0 +1,17 @@
+{
+    "t1": {
+        "testAccountKey": "CORRECT"
+    },
+    "t2": [
+        {
+            "testAccountKey": "WRONG_PASSWORD",
+            "email": "randomEmail@test.pl",
+            "password": "wrongPass"
+        },
+        {
+            "testAccountKey": "EMPTY_CREDENTIALS",
+            "email": " ",
+            "password": " "
+        }
+    ]
+}
