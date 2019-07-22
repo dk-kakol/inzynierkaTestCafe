@@ -20,24 +20,28 @@ createTestCafe('localhost', 1337, 1338)
         const runner = testcafe.createRunner();
 
         return runner
-            .src(['tests/loginTest.js', 'tests/loginTest.js'])
+            .src([
+                'tests/loginTest.js',
+                'tests/calculateTest.js', 
+                'tests/mailTest.js'
+            ])
             .reporter(['spec', {
                 name: 'html',
                 output: stream
             }])
             .screenshots('reports', true, screenshotsPath)
             .browsers(['chrome','firefox:headless'])
-            .concurrency(2)
+            .concurrency(3)
             .run({
                 skipJsErrors: true,
-                selectorTimeout: 5000,  //to sprawdzić czy nie trzeba zwiększyć/zmniejszyć
-                quarantineMode: false //docelowo na true
+                selectorTimeout: 5000,
+                quarantineMode: true 
             });
     })
     .then(failedCount => {
         console.log('Tests failed: ' + failedCount);
         if (failedCount > 0) {
-            //mail.mail(testSuiteName, reportUrl); docelowo uwolnić maile!
+            mail.mail(testSuiteName, reportUrl); 
         }
         testcafe.close();
     });

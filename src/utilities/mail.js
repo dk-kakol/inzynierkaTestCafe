@@ -5,7 +5,7 @@ var params = require('./readConsoleParams')
 console.log(params.mail);
 console.log(params);
 //dodać obsługę maila gdy brak parametru odbiorcy!
-exports.mail = function(testName, url){ 
+exports.mail = function(testName, url, receivers = params.mail){ 
     var transporter = nodemailer.createTransport({
         service: process.env.MAIL_SERVICE,
         auth: {
@@ -16,7 +16,7 @@ exports.mail = function(testName, url){
       
       var mailOptions = {
         from: process.env.MAIL_FROM,
-        to: `${params.mail}`,
+        to: `${receivers}`,
         subject: `Error on test ${testName}`,
         text: 'Check details on report page: ' + url
     };

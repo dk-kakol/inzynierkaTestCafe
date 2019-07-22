@@ -1,0 +1,11 @@
+{
+    "t1": {
+        "filePath": "../data/inzynierka-dane.csv",
+        "recordsNumber": 9,
+        "firstName": "Bielsko-Biała",
+        "lastName": "Sopot",
+        "idToDelete": 8,
+        "period": "2",
+        "acceptResult": 0
+    }
+}
