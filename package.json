@@ -6,7 +6,7 @@
         "dotenv": "^8.0.0",
         "imap-simple": "^4.3.0",
         "minimist": "^1.2.0",
-        "moment": "^2.24.0",
+        "moment": "^2.29.4",
         "moment-timezone": "^0.5.25",
         "nodemailer": "^6.2.1",
         "testcafe": "^1.2.0",
